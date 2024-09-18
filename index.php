@@ -36,7 +36,12 @@
             </div>
             <!-- .p-secWorks__gridここまで -->
 
-            <ol class="p-secWorks__pagination">
+            <?php the_posts_pagination(array(
+                'prev_text' => '&lt;<span class="sr-only">前</span>',
+                'next_text' => '&gt;<span class="sr-only">次</span>'
+            )); ?>
+
+            <!-- <ol class="p-secWorks__pagination">
                 <li class="p-secWorks__pagination__box">
                     <a href="" class="p-secWorks__pagination__link">&lt;</a>
                 </li>
@@ -52,7 +57,7 @@
                 <li class="p-secWorks__pagination__box">
                     <a href="" class="p-secWorks__pagination__link">&gt;</a>
                 </li>
-            </ol>
+            </ol> -->
         </div>
         <!-- data-barba="container"ここまで -->
 
@@ -64,7 +69,7 @@
                 <div class="p-secSkill__grid__item__ctn">
                     <h3 class="p-secSkill__grid__item__heading">HTML/CSS</h3>
                     <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/logo/html.svg" alt="" class="p-secSkill__grid__item__img">
-                    <img src="img/logo/css.svg" alt="" class="p-secSkill__grid__item__img">
+                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/logo/css.svg" alt="" class="p-secSkill__grid__item__img">
                 </div>
                 <p class="p-secSkill__grid__item__text">一般的なサイトで使われる主要なタグやCSSプロパティを理解しており、正しい構造で記述できます。クラスの命名はBEMやFLOCSSに準拠しています。また、SASSが利用できます。</p>
             </div>

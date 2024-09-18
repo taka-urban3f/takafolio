@@ -1,0 +1,45 @@
+///////////////////////////////////////////////////////////
+/// _credit.scss
+///////////////////////////////////////////////////////////
+
+@use "../../foundation/base";
+
+.p-credit {
+    margin-top: 75px;
+    padding: 0 var(--indent-sec);
+
+    &__heading {
+        margin-bottom: 45px;
+        font-size: base.p2r(20);
+    }
+
+    &__list {
+        padding: 0 var(--indent-inner-sec);
+
+        &__item {
+            &:not(:last-of-type) {
+                padding-bottom: 55px;
+                border-bottom: 1px solid var(--gray);
+            }
+
+            &:not(:first-of-type) {
+                padding-top: 55px;
+            }
+
+            &__img {
+                padding-bottom: 10px;
+                height: 100px;
+                width: auto;
+
+                &--html {
+                    margin-left: -15px;
+                }
+            }
+
+            &__link {
+                // text-decoration: underline;
+                color: blue;
+            }
+        }
+    }
+}

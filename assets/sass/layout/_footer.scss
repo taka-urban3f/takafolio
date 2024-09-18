@@ -1,0 +1,75 @@
+///////////////////////////////////////////////////////////
+/// _footer.scss
+///////////////////////////////////////////////////////////
+
+@use "../foundation/base";
+
+.l-footer {
+    margin-top: 75px;
+    padding: 15px 0 4px;
+    background-color: var(--lightGray);
+
+    &__ctn {
+        margin-bottom: 4px;
+        display: flex;
+        justify-content: space-between;
+
+        @include base.mq(tab) {
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: start;
+        }
+    }
+
+    &__title {
+        font-family: "Wire One", sans-serif;
+        font-size: 60px;
+        line-height: 1;
+        letter-spacing: 0.07em;
+    }
+
+    &__fNav {
+        @include base.mq(tab) {
+            margin: 20px 0;
+        }
+
+        &__navList {
+            display: flex;
+            column-gap: 60px;
+        }
+
+        &__item {
+            @include base.font_rokkitt300;
+            font-size: base.p2r(27);
+            letter-spacing: 0.1em;
+            margin-right: - 0.1em;
+
+            &:hover {
+                opacity: 0.5;
+            }
+        }
+    }
+
+    &__ctn2 {
+        text-align: right;
+
+        @include base.mq(tab) {
+            text-align: left;
+        }
+
+        &__linkCredit {
+            display: inline-block;
+            margin-bottom: 5px;
+            font-size: base.p2r(14);
+
+            &:hover {
+                opacity: 0.5;
+            }
+        }
+
+        &__copy {
+            @include base.font_rokkitt300;
+            font-size: base.p2r(14);
+        }
+    }
+}

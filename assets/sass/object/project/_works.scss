@@ -1,0 +1,182 @@
+///////////////////////////////////////////////////////////
+/// _works.scss
+///////////////////////////////////////////////////////////
+
+@use "../../foundation/base";
+
+.p-secWorks {
+    margin-top: 75px;
+    padding: 0 var(--indent-sec);
+
+    &__catList {
+        position: relative;
+        margin-top: 35px;
+        padding: 0 calc(var(--indent-inner-sec) + 20px);
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 83px;
+        white-space: nowrap;
+
+        &::before {
+            content: '';
+            position: absolute;
+            height: var(--cat-frame-h);
+            width: var(--cat-frame-w);
+            top: var(--cat-frame-y);
+            left: var(--cat-frame-x);
+            border: 1px solid var(--green);
+            filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.25));
+        }
+
+        &__item {
+            position: relative;
+            @include base.font_rokkitt300;
+            font-size: base.p2r(23);
+            letter-spacing: 0.1em;
+
+            &:hover {
+                opacity: 0.5;
+            }
+        }
+    }
+
+    &__grid {
+        margin-top: 25px;
+        padding: 0 var(--indent-inner-sec);
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+
+        justify-content: space-between;
+        gap: 50px 26.67px;
+
+        &__item {
+            &__title {
+                margin-top: 10px;
+                font-size: base.p2r(18);
+            }
+        }
+    }
+
+    &__imgCtn {
+        border: 1px solid var(--gray);
+    }
+
+    &__pagination {
+        margin-top: 50px;
+        display: flex;
+        justify-content: center;
+        column-gap: 5px;
+        @include base.font_rokkitt300;
+
+        &__box {
+            $this: &;
+            position: relative;
+            border: 1px solid var(--darkBlue);
+            width: base.p2r(45);
+            height: base.p2r(45);
+            font-size: base.p2r(24);
+
+            &--active {
+                #{$this}:hover:not(&) {
+                    background-color: var(--lightGray);
+                    border: 1px solid var(--green);
+                }
+
+                &::after {
+                    position: absolute;
+                    content: '';
+                    top: 8.8%;
+                    left: 8.8%;
+                    width: base.p2r(35);
+                    height: base.p2r(35);
+                    border: 1px solid var(--green);
+                    filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.25));
+                }
+            }
+        }
+
+        &__link {
+            position: absolute;
+            inset: 0;
+            display: grid;
+            place-items: center;
+        }
+    }
+}
+
+.navigation.pagination .nav-links {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    column-gap: 5px;
+    @include base.font_rokkitt300;
+
+    .page-numbers {
+        $this: &;
+        position: relative;
+        border: 1px solid var(--darkBlue);
+        width: base.p2r(45);
+        height: base.p2r(45);
+        font-size: base.p2r(24);
+        display: grid;
+        place-items: center;
+
+        &.current {
+            #{$this}:hover:not(&) {
+                background-color: var(--lightGray);
+                border: 1px solid var(--green);
+            }
+
+            &::after {
+                position: absolute;
+                content: '';
+                width: base.p2r(35);
+                height: base.p2r(35);
+                border: 1px solid var(--green);
+                filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.25));
+            }
+        }
+    }
+}
+
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    word-wrap: normal !important;
+}
+
+.screen-reader-text:focus {
+    background-color: #eee;
+    clip: auto !important;
+    clip-path: none;
+    color: #444;
+    display: block;
+    font-size: 1em;
+    height: auto;
+    left: 5px;
+    line-height: normal;
+    padding: 15px 23px 14px;
+    text-decoration: none;
+    top: 5px;
+    width: auto;
+    z-index: 100000;
+    /* Above WP toolbar. */
+}
+
+.sr-only {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}

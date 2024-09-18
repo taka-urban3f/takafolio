@@ -1,0 +1,27 @@
+///////////////////////////////////////////////////////////
+/// _heading.scss
+///////////////////////////////////////////////////////////
+
+@use "../../foundation/base";
+
+.c-headingSec {
+    position: relative;
+    display: inline-block;
+    padding: 0 calc(25px - 0.11em) 0 25px; //-0.11emは右端のletter-spacing打ち消し
+    font-family: "Wire One", sans-serif;
+    font-size: base.p2r(45);
+    letter-spacing: 0.11em;
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 16px;
+        border-bottom: 1px solid var(--darkBlue);
+        border-left: 1px solid var(--darkBlue);
+        border-right: 1px solid var(--darkBlue);
+        filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.25));
+    }
+}

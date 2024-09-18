@@ -1,0 +1,53 @@
+///////////////////////////////////////////////////////////
+/// _skill.scss
+///////////////////////////////////////////////////////////
+
+@use "../../foundation/base";
+
+.p-secSkill {
+    margin-top: 75px;
+    padding: 0 var(--indent-sec);
+
+    &__grid {
+        margin-top: 33px;
+        padding: 0 var(--indent-inner-sec);
+        display: grid;
+        grid-gap: 113px 55px;
+        // grid-template-columns: max-content max-content;
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+
+        @include base.mq(tab) {
+            grid-template-columns: 1fr
+        }
+
+        &__item {
+            &__ctn {
+                display: flex;
+                align-items: center;
+                column-gap: 15px;
+            }
+
+            &__heading {
+                margin-right: calc(15px - 0.1em); //-0.1emは右端のletter-spacing打ち消し
+                @include base.font_rokkitt300;
+                font-size: base.p2r(24);
+                letter-spacing: 0.1em;
+            }
+
+            &__img {
+                height: 40px;
+                width: auto;
+            }
+
+            &__text {
+                margin-top: 43px;
+                margin-left: 60px;
+
+                @include base.mq(tab) {
+                    margin-top: 20px;
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,214 @@
+///////////////////////////////////////////////////////////
+/// _works_detail.scss
+///////////////////////////////////////////////////////////
+
+@use "../../foundation/base";
+
+@mixin term {
+    position: relative;
+    padding: 4px 20px 7px;
+    min-width: 152px;
+    width: fit-content;
+    display: grid;
+    place-items: center;
+    font-size: base.p2r(18);
+    letter-spacing: 0.03em;
+
+    @include base.mq(tab) {
+        min-width: 100px;
+    }
+
+    &::before {
+        position: absolute;
+        content: '';
+        inset: 0;
+        border-left: 1px solid var(--darkBlue);
+        border-bottom: 1px solid var(--darkBlue);
+
+        filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.25));
+    }
+}
+
+.p-worksDetail {
+    margin-top: 75px;
+    padding: 0 var(--indent-sec);
+
+    &__heading {
+        font-size: base.p2r(20);
+        letter-spacing: 0.05em;
+    }
+
+    &__overViewCtn {
+        width: 79.2%;
+        margin: 30px auto 0;
+    }
+
+    &__overViewImg {
+        margin-bottom: 20px;
+        border: 1px solid var(--gray);
+    }
+
+    &__SiteLink {
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: fit-content;
+        margin-left: auto;
+        margin-right: 0;
+        padding: 5px 30px;
+        line-height: 1;
+        color: var(--green);
+
+        &::before {
+            position: absolute;
+            content: '';
+            inset: 0;
+            border: 1px solid var(--green);
+            filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.25));
+        }
+
+        &::after {
+            display: inline-block;
+            content: '';
+            margin-left: 5px;
+            width: base.p2r(24);
+            height: base.p2r(24);
+            mask-image: url(../img/new_window.svg);
+            mask-repeat: no-repeat;
+            mask-position: center;
+            mask-size: contain;
+            background-color: var(--green);
+        }
+
+        &__caption {
+            display: inline-block;
+        }
+    }
+
+    &__column>div {
+        margin-top: 33px;
+        padding: 0 var(--indent-inner-sec2);
+        display: grid;
+        grid-template-columns: 46.2% 1fr;
+
+        @include base.mq(tab) {
+            padding: 0;
+            grid-template-columns: 1fr;
+            row-gap: 24px;
+        }
+    }
+
+    &__dl1 {
+        &__column {
+            display: flex;
+            column-gap: 32px;
+
+            &:not(:first-child) {
+                margin-top: 24px;
+            }
+        }
+
+        &__term {
+            @include term;
+        }
+
+        &__desc {
+            display: grid;
+            align-items: center;
+        }
+    }
+
+    &__dl2 {
+        &__term {
+            display: inline-block;
+            @include term;
+        }
+
+        &__desc {
+            margin-top: 14px;
+            margin-left: 20px;
+
+            @include base.mq(tab) {
+                margin-left: 0;
+            }
+        }
+    }
+
+    &__dl3 {
+        margin-top: 40px;
+        padding: 0 var(--indent-inner-sec2);
+
+        @include base.mq(tab) {
+            padding: 0;
+        }
+
+        &__term {
+            @include term;
+        }
+
+        &__desc>div {
+            margin-top: 14px;
+            margin-left: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+            gap: 20px;
+
+            @include base.mq(tab) {
+                margin-left: 0;
+            }
+        }
+
+        &__box {
+            $this: &;
+
+            padding: 10px;
+            border: 1px solid var(--gray);
+
+            &--double {
+                grid-column: span 2;
+
+                @include base.mq(tab) {
+                    grid-column: span 1;
+                }
+            }
+
+            &--doubleFlex {
+                grid-column: span 2;
+
+                &>div {
+                    display: flex;
+                }
+
+                @include base.mq(tab) {
+                    grid-column: span 1;
+
+                    &>div {
+                        display: block;
+                    }
+                }
+            }
+
+            &__mediaCtn {
+                #{$this}--doubleFlex & {
+                    width: 60%;
+
+                    @include base.mq(tab) {
+                        width: auto;
+                    }
+                }
+            }
+
+            &__text {
+                padding: 10px;
+
+                #{$this}--doubleFlex & {
+                    width: 40%;
+
+                    @include base.mq(tab) {
+                        width: auto;
+                    }
+                }
+            }
+        }
+    }
+}

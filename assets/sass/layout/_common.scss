@@ -1,0 +1,17 @@
+///////////////////////////////////////////////////////////
+/// _common.scss
+///////////////////////////////////////////////////////////
+
+@use "../foundation/base";
+
+.l-wrapper {
+    padding-left: 25px;
+    padding-right: 25px;
+    margin: 0 auto;
+    max-width: 1200px;
+
+    @include base.mq(tab) {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}

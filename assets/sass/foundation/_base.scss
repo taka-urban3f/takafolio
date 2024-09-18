@@ -1,0 +1,69 @@
+///////////////////////////////////////////////////////////
+/// _base.scss
+///////////////////////////////////////////////////////////
+
+@function p2r($pixel) {
+    @return $pixel / 16 * 1rem;
+}
+
+$device-width: ('sp': 'screen and (max-width:375px)', 'tab': 'screen and (max-width:768px)');
+
+@mixin mq($device) {
+    @media #{map-get($device-width, $device)} {
+        @content;
+    }
+}
+
+@mixin font_rokkitt300 {
+    font-family: "Rokkitt", serif;
+    font-weight: 300;
+}
+
+:root {
+    --darkBlue: #160058;
+    --green: #69AA00;
+    --gray: #D5D5D5;
+    --lightGray: #FAFAFB;
+
+    --indent-sec: 20px;
+    --indent-inner-sec: 15px;
+    --indent-inner-sec2: 20px;
+
+    --cat-frame-x: 0;
+    --cat-frame-y: 0;
+    --cat-frame-w: 0;
+    --cat-frame-h: 0;
+
+    @include mq(tab) {
+        --indent-sec: 10px;
+        --indent-inner-sec: 10px;
+        --indent-inner-sec2: 10px;
+    }
+}
+
+html {
+    font-size: 100%;
+
+    font-family: "Noto Sans JP",
+        "Helvetica Neue",
+        Arial,
+        "Hiragino Kaku Gothic ProN",
+        "Hiragino Sans",
+        Meiryo,
+        sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    letter-spacing: 0;
+    line-height: 1.5;
+    color: var(--darkBlue);
+}
+
+img {
+    width: 100%;
+    height: auto;
+    vertical-align: top;
+}
+
+dt {
+    font-weight: inherit;
+}

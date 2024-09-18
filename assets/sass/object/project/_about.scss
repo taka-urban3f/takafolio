@@ -1,0 +1,114 @@
+///////////////////////////////////////////////////////////
+/// _about.scss
+///////////////////////////////////////////////////////////
+
+@use "../../foundation/base";
+
+.p-secAbout {
+    margin-top: 75px;
+    padding: 0 var(--indent-sec);
+
+    &__inner {
+        margin-top: 33px;
+        margin-left: var(--indent-inner-sec);
+        margin-right: var(--indent-inner-sec);
+        padding-top: 72px;
+        padding-bottom: 40px;
+
+        border-top: 1px solid var(--darkBlue);
+        border-bottom: 1px solid var(--darkBlue);
+
+        @include base.mq(tab) {
+            padding-top: 40px;
+            padding-bottom: 20px;
+
+        }
+    }
+
+    &__ctn {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        margin-right: 93px;
+
+        @include base.mq(tab) {
+            display: block;
+            margin-right: auto;
+        }
+
+
+        &__block1 {
+            position: relative;
+            margin-left: 80px;
+
+            @include base.mq(tab) {
+                margin-left: 0;
+            }
+
+            &__text1 {
+                font-weight: 400;
+                font-size: base.p2r(20);
+                letter-spacing: 0.03em;
+
+                @include base.mq(tab) {
+                    font-size: base.p2r(18);
+                }
+            }
+
+            &__text2 {
+                margin-top: 28px;
+                font-size: base.p2r(18);
+                letter-spacing: 0.03em;
+
+                @include base.mq(tab) {
+                    font-size: base.p2r(16);
+                }
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                height: 100%;
+                width: 1px;
+                left: -40px;
+                background-color: var(--green);
+
+                @include base.mq(tab) {
+                    display: none;
+                }
+            }
+        }
+
+        &__block2 {
+            margin-top: 38px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+
+            @include base.mq(tab) {
+                margin-top: 10px;
+            }
+
+            &__name {
+                display: block;
+                margin-bottom: -(base.p2r(6));
+                margin-right: 4px;
+                @include base.font_rokkitt300;
+                font-size: base.p2r(23);
+                letter-spacing: 0.1em;
+                line-height: 1;
+
+                @include base.mq(tab) {
+                    font-size: base.p2r(16);
+                }
+            }
+
+            &__face {
+                width: 110px;
+            }
+        }
+    }
+
+
+
+}

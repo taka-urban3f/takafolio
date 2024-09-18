@@ -1,0 +1,65 @@
+///////////////////////////////////////////////////////////
+/// _loading.scss
+///////////////////////////////////////////////////////////
+
+@use "../foundation/base";
+
+.l-loading {
+    position: fixed;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    background-color: white;
+    z-index: 10;
+    
+    &__text {
+        font-family: "Helvetica Neue",
+            Arial,
+            "Hiragino Kaku Gothic ProN",
+            "Hiragino Sans",
+            Meiryo, sans-serif;
+        font-weight: 500;
+        font-style: normal;
+        letter-spacing: 0.1em;
+        color: var(--darkBlue);
+        display: flex;
+        align-items: center;
+
+        &::before {
+            content: '';
+            width: 1em;
+            height: 1em;
+            border: 1px solid var(--darkBlue);
+            animation: left-box 0.4s cubic-bezier(.2,.6,.56,.92) alternate infinite;
+        }
+
+        &::after {
+            content: '';
+            width: 1em;
+            height: 1em;
+            border: 1px solid var(--darkBlue);
+            animation: right-box 0.45s cubic-bezier(.2,.6,.56,.92) alternate infinite;
+        }
+
+        @keyframes left-box {
+            0% {
+                transform: translateX(0) rotate(0);
+            }
+
+            100% {
+                transform: translateX(-50px) rotate(-150deg);
+            }
+        }
+
+        @keyframes right-box {
+            0% {
+                transform: translateX(0) rotate(0);
+            }
+
+            100% {
+                transform: translateX(50px) rotate(150deg);
+            }
+        }
+    }
+
+}
