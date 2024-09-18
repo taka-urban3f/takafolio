@@ -2,9 +2,26 @@
 
 function takafolio_theme_setup()
 {
+    // ページタイトルを動的に出力
     add_theme_support('title-tag');
+
+    // ブロックエディター上でスタイルを適用
+    add_theme_support('editor-styles');
+    add_editor_style('assets/css/editor-style.css');
+
+    // アイキャッチを有効
+    add_theme_support('post-thumbnails');
+    add_image_size('mv_thumbnail', 500, 500, true);
+
+    remove_theme_support('core-block-patterns');
 }
 add_action('after_setup_theme', 'takafolio_theme_setup');
+
+function takafolio_init()
+{
+    include 'reg_block_pattern1.php';
+}
+add_action('init', 'takafolio_init');
 
 function takafolio_enqueue_scripts()
 {
@@ -76,5 +93,9 @@ function takafolio_enqueue_scripts()
         array(),
         '1.0.0',
     );
+
+    // 不必要なCSSスタイルを削除
+    wp_dequeue_style('wp-block-library');
+    wp_dequeue_style('global-styles');
 }
 add_action('wp_enqueue_scripts', 'takafolio_enqueue_scripts');

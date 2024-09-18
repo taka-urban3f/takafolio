@@ -7,8 +7,7 @@
     <meta name="robots" content="noindex, nofollow">
     <meta name="description" content="<?php bloginfo('description'); ?>">
 
-    <link rel="stylesheet" href="css/destyle.css">
-    <link rel="stylesheet" href="css/style.css">
+  
     <!-- <link rel="icon" href="img/favicon.ico"> -->
 
     <noscript>
