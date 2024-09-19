@@ -13,7 +13,7 @@
             $cat_bdesign = get_category_by_slug('banner-design');
             $cat_bdesign_link = get_category_link($cat_bdesign->term_id);
             ?>
-            <li class="p-secWorks__catList__item js_active_ctg"><a href="<?php echo esc_url(site_url()); ?>" class="js-do-barba">all</a></li>
+            <li class="p-secWorks__catList__item"><a href="<?php echo esc_url(site_url()); ?>" class="js-do-barba">all</a></li>
             <li class="p-secWorks__catList__item"><a href="<?php echo esc_url($cat_coding_link); ?>" class="js-do-barba">coding</a></li>
             <li class="p-secWorks__catList__item"><a href="<?php echo esc_url($cat_cat_wdesign_link); ?>" class="js-do-barba">web design</a></li>
             <li class="p-secWorks__catList__item"><a href="<?php echo esc_url($cat_bdesign_link); ?>" class="js-do-barba">banner design</a></li>

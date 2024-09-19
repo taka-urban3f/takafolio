@@ -309,16 +309,25 @@ function set_frame(elem_target, immediate) {
     }
 }
 
-//カテゴリーを表す要素をクリックするとフレームをそこに移動
 const elems_catItem = document.querySelectorAll('.p-secWorks__catList__item');
 if (elems_catItem.length !== 0) {
     elems_catItem.forEach(function (elem_catItem) {
+        //カテゴリーを表す要素をクリックするとフレームをそこに移動
         elem_catItem.addEventListener('click', function (event) {
             set_frame(this, 0);
             // リンク先が同一URLの場合barbaが働かずリロードになるので、それを阻止。
             event.preventDefault();
-
         });
+
+        // この要素内のリンクが、アドレスバーのURLと同じ場合、予めフレームを設定しておく
+        const elem_link = elem_catItem.querySelector('a');
+        if (elem_link) {
+            const href = elem_link.href;
+            const url = location.origin + location.pathname;
+            if (href === url) {
+                elem_catItem.classList.add('js_active_ctg');
+            }
+        }
     });
 }
 
