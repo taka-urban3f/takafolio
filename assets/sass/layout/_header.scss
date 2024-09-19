@@ -14,7 +14,7 @@
     height: calc($header-space-top + min(21vw, $header-height)); //子要素がabsoluteとfixedなので自身の高さを確保
     z-index: 1;
 
-    &--subpage {
+    body:not(:where(.home, .archive)) & {
         height: $header-space-top + $header-height-sub;
     }
 
@@ -28,7 +28,7 @@
         display: flex;
         justify-content: space-between;
 
-        #{$this}--subpage & {
+        body:not(:where(.home, .archive)) & {
             padding: 0 25px 5px;
             height: $header-height-sub;
         }
@@ -55,7 +55,7 @@
         line-height: 1;
         letter-spacing: 0.07em;
 
-        #{$this}--subpage & {
+        body:not(:where(.home, .archive)) & {
             font-size: $header-height-sub * 0.8333;
         }
     }
@@ -70,7 +70,7 @@
         margin-top: -9px;
         margin-left: 7px;
 
-        #{$this}--subpage & {
+        body:not(:where(.home, .archive)) & {
             display: none;
         }
     }

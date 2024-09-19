@@ -309,6 +309,7 @@ function set_frame(elem_target, immediate) {
     }
 }
 
+// カテゴリーを示す要素それぞれに対して行う処理
 const elems_catItem = document.querySelectorAll('.p-secWorks__catList__item');
 if (elems_catItem.length !== 0) {
     elems_catItem.forEach(function (elem_catItem) {
@@ -318,17 +319,32 @@ if (elems_catItem.length !== 0) {
             // リンク先が同一URLの場合barbaが働かずリロードになるので、それを阻止。
             event.preventDefault();
         });
+    });
 
-        // この要素内のリンクが、アドレスバーのURLと同じ場合、予めフレームを設定しておく
-        const elem_link = elem_catItem.querySelector('a');
+    for (const elem of elems_catItem) {
+        // この要素内のリンクが、アドレスバーのURLに含まれる場合、予めフレームを設定しておく
+        const elem_link = elem.querySelector('a');
         if (elem_link) {
             const href = elem_link.href;
+            // const pathname = location.pathname;
             const url = location.origin + location.pathname;
+            // if (pathname === '/') {
+            //     if (href === url) {
+            //         elem.classList.add('js_active_ctg');
+            //     }
+            // } else {
             if (href === url) {
-                elem_catItem.classList.add('js_active_ctg');
-            }
+                elem.classList.add('js_active_ctg');
+                break;
+             }
+             //else{
+            //     if (url.startsWith(href)) {
+            //         elem.classList.add('js_active_ctg');
+            //         break;
+            //     }
+            // }
         }
-    });
+    }
 }
 
 function whenResizeCatList() {

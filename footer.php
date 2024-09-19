@@ -11,7 +11,7 @@
                 </nav>
             </div>
             <div class="l-footer__ctn2">
-                <a href="credit.html" class="l-footer__ctn2__linkCredit">このサイトで使用している画像に関するクレジット表記はこちら</a>
+                <a href="<?php the_permalink(get_page_by_path('credit')); ?>" class="l-footer__ctn2__linkCredit">このサイトで使用している画像に関するクレジット表記はこちら</a>
                 <p class="l-footer__ctn2__copy">&copy;2024 Takahiro Izuhara</p>
             </div>
         </div>

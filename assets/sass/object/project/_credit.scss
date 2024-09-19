@@ -27,16 +27,19 @@
             }
 
             &__img {
-                padding-bottom: 10px;
-                height: 100px;
-                width: auto;
 
                 &--html {
                     margin-left: -15px;
                 }
+
+                &>img {
+                    padding-bottom: 10px;
+                    height: 100px;
+                    width: auto;
+                }
             }
 
-            &__link {
+            & a {
                 // text-decoration: underline;
                 color: blue;
             }
