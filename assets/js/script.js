@@ -336,8 +336,8 @@ if (elems_catItem.length !== 0) {
             if (href === url) {
                 elem.classList.add('js_active_ctg');
                 break;
-             }
-             //else{
+            }
+            //else{
             //     if (url.startsWith(href)) {
             //         elem.classList.add('js_active_ctg');
             //         break;
@@ -346,6 +346,14 @@ if (elems_catItem.length !== 0) {
         }
     }
 }
+
+if (document.querySelector('body').classList.contains('home')) {
+    document.querySelector('.js-ctg-home').classList.add('js_active_ctg');
+} else {
+    document.querySelector('body').className.match(/category-(?!\d)[\w-]+/);
+}
+// console.log(document.querySelector('body').className.match(/category-(?!\d)[\w-]+/g));
+// console.log(document.querySelectorAll('.p-secWorks__catList__item')[3].className.match(/js-ctg-[\w-]+/));
 
 function whenResizeCatList() {
     const elem_active = document.querySelector('.js_active_ctg');
