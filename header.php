@@ -29,16 +29,16 @@
         <header class="l-header">
             <div class="l-header__inner">
                 <div class="l-header__cntTitle">
-                    <a href="index.html">
+                    <a href="<?php echo esc_url(site_url()); ?>">
                         <h1 class="l-header__title">TAKAFOLIO</h1>
                         <span class="l-header__subTitle">The Takahiro's portfolio site</span>
                     </a>
                 </div>
                 <nav class="l-header__gNav">
                     <ul class="l-header__navList">
-                        <li class="l-header__navList__item"><a href="/index.html#secWorks">works</a></li>
-                        <li class="l-header__navList__item"><a href="/index.html#secSkill">skill</a></li>
-                        <li class="l-header__navList__item"><a href="/index.html#secAbout">about</a></li>
+                        <li class="l-header__navList__item"><a href="<?php echo esc_url(site_url()); ?>#secWorks">works</a></li>
+                        <li class="l-header__navList__item"><a href="<?php echo esc_url(site_url()); ?>#secSkill">skill</a></li>
+                        <li class="l-header__navList__item"><a href="<?php echo esc_url(site_url()); ?>#secAbout">about</a></li>
                     </ul>
                 </nav>
                 <button class="l-header__humBtn">
@@ -48,9 +48,9 @@
             </div>
             <nav class="l-header__humMenu">
                 <ul class="l-header__humMenu__list">
-                    <li class="l-header__humMenu__list__item"><a href="/index.html#secWorks">works</a></li>
-                    <li class="l-header__humMenu__list__item"><a href="/index.html#secSkill">skill</a></li>
-                    <li class="l-header__humMenu__list__item"><a href="/index.html#secAbout">about</a></li>
+                    <li class="l-header__humMenu__list__item"><a href="<?php echo esc_url(site_url()); ?>#secWorks">works</a></li>
+                    <li class="l-header__humMenu__list__item"><a href="<?php echo esc_url(site_url()); ?>#secSkill">skill</a></li>
+                    <li class="l-header__humMenu__list__item"><a href="<?php echo esc_url(site_url()); ?>#secAbout">about</a></li>
                     <button class="l-header__humMenu__closeBtn">
                         <span class="l-header__humMenu__closeBtn__line"></span>
                         <span class="l-header__humMenu__closeBtn__caption">close</span>

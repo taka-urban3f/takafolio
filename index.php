@@ -40,24 +40,6 @@
                 'prev_text' => '&lt;<span class="sr-only">前</span>',
                 'next_text' => '&gt;<span class="sr-only">次</span>'
             )); ?>
-
-            <!-- <ol class="p-secWorks__pagination">
-                <li class="p-secWorks__pagination__box">
-                    <a href="" class="p-secWorks__pagination__link">&lt;</a>
-                </li>
-                <li class="p-secWorks__pagination__box p-secWorks__pagination__box--active">
-                    <a href="" class="p-secWorks__pagination__link">1</a>
-                </li>
-                <li class="p-secWorks__pagination__box">
-                    <a href="" class="p-secWorks__pagination__link">2</a>
-                </li>
-                <li class="p-secWorks__pagination__box">
-                    <a href="" class="p-secWorks__pagination__link">3</a>
-                </li>
-                <li class="p-secWorks__pagination__box">
-                    <a href="" class="p-secWorks__pagination__link">&gt;</a>
-                </li>
-            </ol> -->
         </div>
         <!-- data-barba="container"ここまで -->
 
