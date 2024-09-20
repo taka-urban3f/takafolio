@@ -117,7 +117,7 @@ function LoadingToMain() {
     document.removeEventListener('wheel', noscroll);
 
     //選択中のカテゴリーを表すフレームの初期位置設定
-    const elem_active = document.querySelector('.js_active_ctg');
+    const elem_active = document.querySelector('.js_active_cat');
     if (elem_active) {
         set_frame(elem_active, 0);
     }
@@ -261,8 +261,7 @@ function splashAnim() {
 }
 
 //--------------------------------------------------------------------------------------------
-//ターゲット要素を囲うようにフレームのサイズ・位置を計算し
-//GSAPで滑らかにCSS変数を変化させ、疑似要素のフレームを操作
+//選択中のカテゴリーを囲う枠に関連した処理
 //--------------------------------------------------------------------------------------------
 //CSSプロパティを取得する為にルートエレメントを取得
 const elem_root = document.querySelector(':root');
@@ -274,7 +273,8 @@ const padding_left = 20;
 const padding_bottom = 2;
 const padding_right = 20;
 
-// immediateが０ならアニメーションで移動、１なら瞬間的に移動
+//ターゲット要素を囲うように枠のサイズ・位置を計算し
+//GSAPで滑らかにCSS変数を変化させ、枠を操作する。
 function set_frame(elem_target, immediate) {
     if (elem_target == null) return;
 
@@ -290,6 +290,7 @@ function set_frame(elem_target, immediate) {
     const set_width = offset_width + padding_left + padding_right;
     const set_height = offset_height + padding_top + padding_bottom;
 
+    // immediateが０ならアニメーションで移動、１なら瞬間的に移動
     if (immediate) {
         gsap.set(elem_root, {
             '--cat-frame-x': set_left + 'px',
@@ -309,7 +310,7 @@ function set_frame(elem_target, immediate) {
     }
 }
 
-// カテゴリーを示す要素それぞれに対して行う処理
+// カテゴリーのクリックイベントハンドラ
 const elems_catItem = document.querySelectorAll('.p-secWorks__catList__item');
 if (elems_catItem.length !== 0) {
     elems_catItem.forEach(function (elem_catItem) {
@@ -320,43 +321,24 @@ if (elems_catItem.length !== 0) {
             event.preventDefault();
         });
     });
+}
 
-    for (const elem of elems_catItem) {
-        // この要素内のリンクが、アドレスバーのURLに含まれる場合、予めフレームを設定しておく
-        const elem_link = elem.querySelector('a');
-        if (elem_link) {
-            const href = elem_link.href;
-            // const pathname = location.pathname;
-            const url = location.origin + location.pathname;
-            // if (pathname === '/') {
-            //     if (href === url) {
-            //         elem.classList.add('js_active_ctg');
-            //     }
-            // } else {
-            if (href === url) {
-                elem.classList.add('js_active_ctg');
-                break;
-            }
-            //else{
-            //     if (url.startsWith(href)) {
-            //         elem.classList.add('js_active_ctg');
-            //         break;
-            //     }
-            // }
-        }
+// 'js_active_cat'クラスを付与することにより、カテゴリーキャプションの選択枠の初期位置を設定。
+// WPがbody要素に設定しているクラス（カテゴリースラッグが含まれる）、
+// に対応するカテゴリーキャプションを選択状態にする。
+if (document.querySelector('body').classList.contains('home')) {
+    document.querySelector('.js-cat-home').classList.add('js_active_cat');
+} else  {
+    const category = document.querySelector('body').className.match(/category-(?!\d)[\w-]+/);
+    if (category) {
+        const slug = category[0].substring(9); // カテゴリースラッグのみを取り出す。
+        // 対応するカテゴリーキャプションには予めPHPでカテゴリースラッグを含めたクラスを付与している。
+        document.querySelector('.js-cat-' + slug).classList.add('js_active_cat');
     }
 }
 
-if (document.querySelector('body').classList.contains('home')) {
-    document.querySelector('.js-ctg-home').classList.add('js_active_ctg');
-} else {
-    document.querySelector('body').className.match(/category-(?!\d)[\w-]+/);
-}
-// console.log(document.querySelector('body').className.match(/category-(?!\d)[\w-]+/g));
-// console.log(document.querySelectorAll('.p-secWorks__catList__item')[3].className.match(/js-ctg-[\w-]+/));
-
 function whenResizeCatList() {
-    const elem_active = document.querySelector('.js_active_ctg');
+    const elem_active = document.querySelector('.js_active_cat');
     if (elem_active) {
         set_frame(elem_active, 1);
     }
