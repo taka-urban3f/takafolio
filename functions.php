@@ -17,12 +17,6 @@ function takafolio_theme_setup()
 }
 add_action('after_setup_theme', 'takafolio_theme_setup');
 
-function takafolio_init()
-{
-    include 'reg_block_pattern1.php';
-}
-add_action('init', 'takafolio_init');
-
 function takafolio_enqueue_scripts()
 {
     // js読み込み
