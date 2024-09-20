@@ -68,7 +68,7 @@
                     <h3 class="p-secSkill__grid__item__heading">JavaScript</h3>
                     <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/logo/js.svg" alt="" class="p-secSkill__grid__item__img">
                 </div>
-                <p class="p-secSkill__grid__item__text">各種イベントハンドラの記述や、DOM操作によるローディング画面表示や、スクロールアニメーションなどが可能。jQuery,Swiper,Slickの使用経験あり。</p>
+                <p class="p-secSkill__grid__item__text">各種イベントハンドラの記述や、DOM操作によるローディング画面表示や、スクロールアニメーションなどが可能。jQuery,GSAP,barba,Lenis,Swiper,Slickなどのライブラリ使用経験あり。</p>
             </div>
             <div class="p-secSkill__grid__item">
                 <div class="p-secSkill__grid__item__ctn">
@@ -85,6 +85,21 @@
                 </div>
                 <p class="p-secSkill__grid__item__text">ポートフォリオを作成する時にGitを利用し、基本的にローカルリポジトリのみで変更履歴の管理をしています。職業訓練中はチームでのWeb制作があり、GitHubにてリモートリポジトリを作成しファイルの編集を共有しました。<br>
                     チームでリモートリポジトリを扱う際は、同じファイルを同時に編集しないように、言葉でのコミュニケーションが不可欠でした。</p>
+            </div>
+            <div class="p-secSkill__grid__item">
+                <div class="p-secSkill__grid__item__ctn">
+                    <h3 class="p-secSkill__grid__item__heading">Docker/node.js/PHP</h3>
+                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/logo/docker.svg" alt="" class="p-secSkill__grid__item__img">
+                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/logo/jsIconGreen.svg" alt="" class="p-secSkill__grid__item__img">
+                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/logo/php.svg" alt="" class="p-secSkill__grid__item__img">
+                </div>
+                <p class="p-secSkill__grid__item__text">これらについては、Webコーダーにとってすぐに必要になるものではないかもしれませんが、興味があり学習中です。</p>
+            </div>
+            <div class="p-secSkill__grid__item">
+                <div class="p-secSkill__grid__item__ctn">
+                    <h3 class="p-secSkill__grid__item__heading">Figma/Illustrator/PhotoShop</h3>
+                </div>
+                <p class="p-secSkill__grid__item__text">これらのアドビ製品についても基本的な操作を行う事が出来ます。</p>
             </div>
         </div>
         <!-- .p-secSkill__gridここまで -->
