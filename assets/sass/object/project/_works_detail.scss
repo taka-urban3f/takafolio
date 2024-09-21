@@ -90,7 +90,7 @@
         }
     }
 
-    &__column>div {
+    &__2columns>div {
         margin-top: 33px;
         padding: 0 var(--indent-inner-sec2);
         display: grid;
@@ -104,7 +104,7 @@
     }
 
     &__dl1 {
-        &__column {
+        &__flex {
             display: flex;
             column-gap: 32px;
 
@@ -126,6 +126,28 @@
     &__dl2 {
         &__term {
             display: inline-block;
+            @include term;
+        }
+
+        &__desc {
+            margin-top: 14px;
+            margin-left: 20px;
+
+            @include base.mq(tab) {
+                margin-left: 0;
+            }
+        }
+    }
+
+    &__about {
+        margin-top: 40px;
+        padding: 0 var(--indent-inner-sec2);
+
+        @include base.mq(tab) {
+            padding: 0;
+        }
+
+        &__term {
             @include term;
         }
 
