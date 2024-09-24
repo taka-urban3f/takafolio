@@ -6,6 +6,13 @@
             <?php the_post(); ?>
 
             <div id="post-<?php the_ID(); ?>" <?php post_class('p-worksDetail'); ?>>
+                <?php $cat_list = get_the_category();
+                foreach ($cat_list as $cat) : ?>
+                    <span class="p-worksDetail__cat">
+                        <?php echo esc_html($cat->name); ?>
+                    </span>
+                <?php endforeach; ?>
+
                 <h2 class="p-worksDetail__heading"><?php the_title(); ?></h2>
                 <div class="p-worksDetail__overViewCtn">
                     <?php
