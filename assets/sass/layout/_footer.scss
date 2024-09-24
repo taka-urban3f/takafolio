@@ -14,7 +14,7 @@
         display: flex;
         justify-content: space-between;
 
-        @include base.mq(tab) {
+        @include base.mq(sp) {
             flex-direction: column;
             justify-content: flex-start;
             align-items: start;
@@ -29,7 +29,7 @@
     }
 
     &__fNav {
-        @include base.mq(tab) {
+        @include base.mq(sp) {
             margin: 20px 0;
         }
 
@@ -53,7 +53,7 @@
     &__ctn2 {
         text-align: right;
 
-        @include base.mq(tab) {
+        @include base.mq(sp) {
             text-align: left;
         }
 

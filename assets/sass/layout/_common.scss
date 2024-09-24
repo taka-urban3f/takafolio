@@ -10,7 +10,7 @@
     margin: 0 auto;
     max-width: 1200px;
 
-    @include base.mq(tab) {
+    @include base.mq(sp) {
         padding-left: 15px;
         padding-right: 15px;
     }

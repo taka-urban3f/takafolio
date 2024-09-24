@@ -18,7 +18,7 @@
         border-top: 1px solid var(--darkBlue);
         border-bottom: 1px solid var(--darkBlue);
 
-        @include base.mq(tab) {
+        @include base.mq(sp) {
             padding-top: 40px;
             padding-bottom: 20px;
 
@@ -31,7 +31,7 @@
         align-items: flex-end;
         margin-right: 93px;
 
-        @include base.mq(tab) {
+        @include base.mq(sp) {
             display: block;
             margin-right: auto;
         }
@@ -41,7 +41,7 @@
             position: relative;
             margin-left: 80px;
 
-            @include base.mq(tab) {
+            @include base.mq(sp) {
                 margin-left: 0;
             }
 
@@ -50,7 +50,7 @@
                 font-size: base.p2r(20);
                 letter-spacing: 0.03em;
 
-                @include base.mq(tab) {
+                @include base.mq(sp) {
                     font-size: base.p2r(18);
                 }
             }
@@ -60,7 +60,7 @@
                 font-size: base.p2r(18);
                 letter-spacing: 0.03em;
 
-                @include base.mq(tab) {
+                @include base.mq(sp) {
                     font-size: base.p2r(16);
                 }
             }
@@ -73,7 +73,7 @@
                 left: -40px;
                 background-color: var(--green);
 
-                @include base.mq(tab) {
+                @include base.mq(sp) {
                     display: none;
                 }
             }
@@ -85,7 +85,7 @@
             justify-content: flex-end;
             align-items: flex-end;
 
-            @include base.mq(tab) {
+            @include base.mq(sp) {
                 margin-top: 10px;
             }
 
@@ -98,7 +98,7 @@
                 letter-spacing: 0.1em;
                 line-height: 1;
 
-                @include base.mq(tab) {
+                @include base.mq(sp) {
                     font-size: base.p2r(16);
                 }
             }

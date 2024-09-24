@@ -14,7 +14,7 @@
     font-size: base.p2r(18);
     letter-spacing: 0.03em;
 
-    @include base.mq(tab) {
+    @include base.mq(sp) {
         min-width: 100px;
     }
 
@@ -40,8 +40,8 @@
         font-size: base.p2r(15);
         border: 1px solid var(--darkBlue);
 
-        &:not(:first-of-type){
-            margin-left:5px;
+        &:not(:first-of-type) {
+            margin-left: 5px;
         }
     }
 
@@ -108,8 +108,9 @@
         padding: 0 var(--indent-inner-sec2);
         display: grid;
         grid-template-columns: 46.2% 1fr;
+        column-gap: 15px;
 
-        @include base.mq(tab) {
+        @include base.mq(sp) {
             padding: 0;
             grid-template-columns: 1fr;
             row-gap: 24px;
@@ -124,6 +125,10 @@
             &:not(:first-child) {
                 margin-top: 24px;
             }
+
+            @include base.mq(tab) {
+                display: block;
+            }
         }
 
         &__term {
@@ -131,9 +136,18 @@
         }
 
         &__desc {
-            margin-right: 10px;
             display: grid;
             align-items: center;
+
+            @include base.mq(tab) {
+                margin-top: 14px;
+                margin-left: 20px;
+                display: block;
+            }
+
+            @include base.mq(sp) {
+                margin-left: 0;
+            }
         }
     }
 
@@ -147,7 +161,7 @@
             margin-top: 14px;
             margin-left: 20px;
 
-            @include base.mq(tab) {
+            @include base.mq(sp) {
                 margin-left: 0;
             }
         }
@@ -157,7 +171,7 @@
         margin-top: 40px;
         padding: 0 var(--indent-inner-sec2);
 
-        @include base.mq(tab) {
+        @include base.mq(sp) {
             padding: 0;
         }
 
@@ -169,7 +183,7 @@
             margin-top: 14px;
             margin-left: 20px;
 
-            @include base.mq(tab) {
+            @include base.mq(sp) {
                 margin-left: 0;
             }
         }
@@ -179,7 +193,7 @@
         margin-top: 40px;
         padding: 0 var(--indent-inner-sec2);
 
-        @include base.mq(tab) {
+        @include base.mq(sp) {
             padding: 0;
         }
 
@@ -194,7 +208,7 @@
             grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
             gap: 20px;
 
-            @include base.mq(tab) {
+            @include base.mq(sp) {
                 margin-left: 0;
             }
         }
@@ -208,7 +222,7 @@
             &--double {
                 grid-column: span 2;
 
-                @include base.mq(tab) {
+                @include base.mq(sp) {
                     grid-column: span 1;
                 }
             }
@@ -220,7 +234,7 @@
                     display: flex;
                 }
 
-                @include base.mq(tab) {
+                @include base.mq(sp) {
                     grid-column: span 1;
 
                     &>div {
@@ -234,11 +248,11 @@
                     width: auto;
                     max-width: 100%;
                 }
-                
+
                 #{$this}--doubleFlex & {
                     width: 60%;
 
-                    @include base.mq(tab) {
+                    @include base.mq(sp) {
                         width: auto;
                     }
                 }
@@ -250,7 +264,7 @@
                 #{$this}--doubleFlex & {
                     width: 40%;
 
-                    @include base.mq(tab) {
+                    @include base.mq(sp) {
                         width: auto;
                     }
                 }

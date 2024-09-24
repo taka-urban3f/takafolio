@@ -6,7 +6,7 @@
     @return $pixel / 16 * 1rem;
 }
 
-$device-width: ('sp': 'screen and (max-width:375px)', 'tab': 'screen and (max-width:768px)');
+$device-width: ('sp': 'screen and (max-width:767px)', 'tab': 'screen and (max-width: 1199px)');
 
 @mixin mq($device) {
     @media #{map-get($device-width, $device)} {
@@ -34,7 +34,7 @@ $device-width: ('sp': 'screen and (max-width:375px)', 'tab': 'screen and (max-wi
     --cat-frame-w: 0;
     --cat-frame-h: 0;
 
-    @include mq(tab) {
+    @include mq(sp) {
         --indent-sec: 10px;
         --indent-inner-sec: 10px;
         --indent-inner-sec2: 10px;

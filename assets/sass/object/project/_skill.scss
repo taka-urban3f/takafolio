@@ -16,7 +16,7 @@
         // grid-template-columns: max-content max-content;
         grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
 
-        @include base.mq(tab) {
+        @include base.mq(sp) {
             grid-template-columns: 1fr
         }
 
@@ -43,7 +43,7 @@
                 margin-top: 43px;
                 margin-left: 60px;
 
-                @include base.mq(tab) {
+                @include base.mq(sp) {
                     margin-top: 20px;
                     margin-left: 0;
                 }

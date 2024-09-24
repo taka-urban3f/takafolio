@@ -76,7 +76,7 @@
     }
 
     &__gNav {
-        @include base.mq(tab) {
+        @include base.mq(sp) {
             display: none;
         }
     }
@@ -109,7 +109,7 @@
             opacity: 0.5;
         }
 
-        @include base.mq(tab) {
+        @include base.mq(sp) {
             display: grid;
             place-items: center;
         }
