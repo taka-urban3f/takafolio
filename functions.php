@@ -11,7 +11,7 @@ function takafolio_theme_setup()
 
     // アイキャッチを有効
     add_theme_support('post-thumbnails');
-    add_image_size('mv_thumbnail', 500, 500, true);
+    add_image_size('mv_thumbnail', 500, 500, false);
 
     remove_theme_support('core-block-patterns');
 }

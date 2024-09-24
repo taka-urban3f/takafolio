@@ -118,6 +118,7 @@
         }
 
         &__desc {
+            margin-right: 10px;
             display: grid;
             align-items: center;
         }
@@ -216,6 +217,11 @@
             }
 
             &__mediaCtn {
+                &>img {
+                    width: auto;
+                    max-width: 100%;
+                }
+                
                 #{$this}--doubleFlex & {
                     width: 60%;
 
