@@ -7,7 +7,7 @@
 .c-headingSec {
     position: relative;
     display: inline-block;
-    padding: 0 calc(25px - 0.11em) 0 25px; //-0.11emは右端のletter-spacing打ち消し
+    padding: 0 calc(25px - 0.11em) 0 25px; //-0.11emは右端のletter-spacing分をマイナス。
     font-family: "Wire One", sans-serif;
     font-size: base.p2r(45);
     letter-spacing: 0.11em;

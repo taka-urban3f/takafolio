@@ -37,6 +37,10 @@
             &__img {
                 height: 40px;
                 width: auto;
+
+                @include base.mq(sp) {
+                    height: 30px;
+                }
             }
 
             &__text {
