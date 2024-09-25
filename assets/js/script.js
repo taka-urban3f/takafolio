@@ -1,8 +1,7 @@
 'use strict';
 
-//サイトトップURLを保持
-// const site_url = 'http://192.168.1.5:5500'; //サブディレクトリにサイトを設置する場合はディレクトリまで指定
-const site_url = location.origin; //ドメイントップに単一のサイトを設置する場合はこれでもOK
+//サイトトップURLを保持(wpのテンプレタグでカスタムデータ属性に出力してある)
+const site_url = document.body.dataset.siteTop; //サブディレクトリにサイトを設置する場合はディレクトリまで必要。
 
 //同一サイト内から遷移してきた場合はフラグを立てる。
 const ref = document.referrer;
@@ -10,7 +9,7 @@ let flag_same_site = 0;
 if (ref.includes(site_url)) {
     flag_same_site = 1;
 }
-
+testf();
 // 指定したパスを含むURLの場合だけスプラッシュアニメーションを実行するフラグを立てる
 const paths = ['/', '/index.html'];
 const lochref = location.href;
