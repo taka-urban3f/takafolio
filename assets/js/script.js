@@ -105,7 +105,7 @@ if (typeof barba !== 'undefined' && document.querySelector('[data-barba="contain
             },
             after: function () {
                 if (typeof (gtag) === 'function') {
-                    gtag('event', 'link_barba', {
+                    gtag('event', 'click_link_barba', {
                         page_path: window.location.pathname
                     });
                 }
