@@ -13,18 +13,14 @@
         gtag('js', new Date());
 
         gtag('config', 'G-RFL87FLY8N');
-
-        function testf(){
-            window.alert('he6');
-        }
     </script>
-
+    
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex, nofollow">
     <meta name="description" content="<?php bloginfo('description'); ?>">
 
-
+  
     <!-- <link rel="icon" href="img/favicon.ico"> -->
 
     <noscript>

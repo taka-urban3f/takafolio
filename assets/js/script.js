@@ -9,7 +9,7 @@ let flag_same_site = 0;
 if (ref.includes(site_url)) {
     flag_same_site = 1;
 }
-testf();
+
 // 指定したパスを含むURLの場合だけスプラッシュアニメーションを実行するフラグを立てる
 const paths = ['/', '/index.html'];
 const lochref = location.href;
@@ -102,6 +102,13 @@ if (typeof barba !== 'undefined' && document.querySelector('[data-barba="contain
                     ease: "expo.out",
                     duration: 0.4,
                 });
+            },
+            after: function () {
+                if (typeof (gtag) === 'function') {
+                    gtag('event', 'link_barba', {
+                        page_path: window.location.pathname
+                    });
+                }
             },
         }, ],
     });
@@ -327,7 +334,7 @@ if (elems_catItem.length !== 0) {
 // に対応するカテゴリーキャプションを選択状態にする。
 if (document.querySelector('body').classList.contains('home')) {
     document.querySelector('.js-cat-home').classList.add('js_active_cat');
-} else  {
+} else {
     const category = document.querySelector('body').className.match(/category-(?!\d)[\w-]+/);
     if (category) {
         const slug = category[0].substring(9); // カテゴリースラッグのみを取り出す。
