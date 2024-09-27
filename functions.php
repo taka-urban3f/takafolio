@@ -58,7 +58,7 @@ function takafolio_enqueue_scripts()
     );
     wp_enqueue_style(
         'takafolio_style',
-        get_template_directory_uri() . '/assets/css/style.css',
+        get_template_directory_uri() . '/assets/css/style.min.css',
         array(),
         '1.0.0',
     );
