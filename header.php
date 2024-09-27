@@ -20,8 +20,8 @@
     <meta name="robots" content="noindex, nofollow">
     <meta name="description" content="<?php bloginfo('description'); ?>">
 
-  
-    <!-- <link rel="icon" href="img/favicon.ico"> -->
+    <link rel="icon" href="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/favicon.ico">
+    <link rel="apple-touch-icon" type="image/png" href="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/apple-touch-icon-180x180.png">
 
     <noscript>
         <style>
