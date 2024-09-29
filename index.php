@@ -57,7 +57,7 @@
         <div class="p-secSkill__grid">
             <div class="p-secSkill__grid__item">
                 <div class="p-secSkill__grid__item__ctn">
-                    <h3 class="p-secSkill__grid__item__heading">HTML/CSS</h3>
+                    <h3 class="p-secSkill__grid__item__heading">HTML / CSS</h3>
                     <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/logo/html.svg" alt="" class="p-secSkill__grid__item__img">
                     <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/logo/css.svg" alt="" class="p-secSkill__grid__item__img">
                 </div>
@@ -79,7 +79,7 @@
             </div>
             <div class="p-secSkill__grid__item">
                 <div class="p-secSkill__grid__item__ctn">
-                    <h3 class="p-secSkill__grid__item__heading">Git/GitHub</h3>
+                    <h3 class="p-secSkill__grid__item__heading">Git / GitHub</h3>
                     <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/logo/git.svg" alt="" class="p-secSkill__grid__item__img">
                     <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/logo/github.svg" alt="" class="p-secSkill__grid__item__img">
                 </div>
@@ -87,7 +87,7 @@
             </div>
             <div class="p-secSkill__grid__item">
                 <div class="p-secSkill__grid__item__ctn">
-                    <h3 class="p-secSkill__grid__item__heading">Docker/node.js/PHP</h3>
+                    <h3 class="p-secSkill__grid__item__heading">Docker / node.js / PHP</h3>
                     <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/logo/docker.svg" alt="" class="p-secSkill__grid__item__img">
                     <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/logo/jsIconGreen.svg" alt="" class="p-secSkill__grid__item__img">
                     <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/logo/php.svg" alt="" class="p-secSkill__grid__item__img">
@@ -96,7 +96,7 @@
             </div>
             <div class="p-secSkill__grid__item">
                 <div class="p-secSkill__grid__item__ctn">
-                    <h3 class="p-secSkill__grid__item__heading">Figma/Illustrator/PhotoShop</h3>
+                    <h3 class="p-secSkill__grid__item__heading">Figma / Illustrator / PhotoShop</h3>
                     <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/logo/figma.svg" alt="" class="p-secSkill__grid__item__img">
                     <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/logo/ps.svg" alt="" class="p-secSkill__grid__item__img">
                     <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/logo/ai.svg" alt="" class="p-secSkill__grid__item__img">
