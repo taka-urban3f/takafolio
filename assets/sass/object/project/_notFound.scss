@@ -1,0 +1,16 @@
+///////////////////////////////////////////////////////////
+/// _404.scss
+///////////////////////////////////////////////////////////
+
+@use "../../foundation/base";
+
+.p-notFound {
+    margin: 100px 50px;
+    height: 100vh;
+    color: var(--darkBlue);
+    font-size: base.p2r(18);
+
+    &__link {
+        color: var(--green);
+    }
+}
