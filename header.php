@@ -56,9 +56,15 @@
                 </div>
                 <nav class="l-header__gNav">
                     <ul class="l-header__navList">
-                        <li class="l-header__navList__item"><a href="#secWorks">works</a></li>
-                        <li class="l-header__navList__item"><a href="#secSkill">skill</a></li>
-                        <li class="l-header__navList__item"><a href="#secAbout">about</a></li>
+                        <?php
+                        $url_or_empty = '';
+                        if (!is_home() && !is_front_page()) {
+                            $url_or_empty = site_url();
+                        }
+                        ?>
+                        <li class="l-header__navList__item"><a href="<?php echo $url_or_empty; ?>#secWorks">works</a></li>
+                        <li class="l-header__navList__item"><a href="<?php echo $url_or_empty; ?>#secSkill">skill</a></li>
+                        <li class="l-header__navList__item"><a href="<?php echo $url_or_empty; ?>#secAbout">about</a></li>
                     </ul>
                 </nav>
                 <button class="l-header__humBtn">
@@ -69,9 +75,9 @@
             <nav class="l-header__humMenu">
                 <div class="l-header__humMenu__box">
                     <ul class="l-header__humMenu__list">
-                        <li class="l-header__humMenu__list__item"><a href="#secWorks">works</a></li>
-                        <li class="l-header__humMenu__list__item"><a href="#secSkill">skill</a></li>
-                        <li class="l-header__humMenu__list__item"><a href="#secAbout">about</a></li>
+                        <li class="l-header__humMenu__list__item"><a href="<?php echo $url_or_empty; ?>#secWorks">works</a></li>
+                        <li class="l-header__humMenu__list__item"><a href="<?php echo $url_or_empty; ?>#secSkill">skill</a></li>
+                        <li class="l-header__humMenu__list__item"><a href="<?php echo $url_or_empty; ?>#secAbout">about</a></li>
                     </ul>
                     <button class="l-header__humMenu__closeBtn">
                         <span class="l-header__humMenu__closeBtn__line"></span>
