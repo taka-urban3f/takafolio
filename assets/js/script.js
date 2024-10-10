@@ -390,12 +390,12 @@ window.addEventListener('load', function () {
 
 function menuOpen() {
     const tl = gsap.timeline();
-    tl.set('.l-header__humMenu__list', {
+    tl.set('.l-header__humMenu__box', {
         opacity: 0,
         y: '-20%',
     }).call(function () {
         document.querySelector('.l-header__humMenu').classList.add('l-header__humMenu--menuOpen');
-    }).to('.l-header__humMenu__list', {
+    }).to('.l-header__humMenu__box', {
         opacity: 1,
         y: 0,
         duration: 0.2,
@@ -407,7 +407,7 @@ function menuOpen() {
 
 function menuClose() {
     const tl = gsap.timeline();
-    tl.to('.l-header__humMenu__list', {
+    tl.to('.l-header__humMenu__box', {
         opacity: 0,
         y: '-20%',
         duration: 0.2,
